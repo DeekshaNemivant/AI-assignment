@@ -1,0 +1,17 @@
+UGV Navigation with Static Obstacles
+
+Finds the shortest path for an Unmanned Ground Vehicle (UGV) across a 70 × 70 km battlefield grid (1 cell = 1 km) with randomly placed, known obstacles.
+It uses A* search, draws the route, and prints Measures of Effectiveness (MoE).
+
+Requirements
+Python 3.8+
+matplotlib
+How it works
+The UGV moves in 8 directions. Straight moves cost 1, diagonals cost √2.
+Diagonal moves between two touching obstacles are not allowed.
+A* uses the octile-distance heuristic, which never overestimates, so the path found is always the shortest one.
+If a random map has no route, a new map is generated (up to 500 tries).
+
+Measures of Effectiveness
+
+Path distance, straight-line distance, path efficiency (straight-line ÷ path), detour %, waypoints, number of turns, nodes expanded, search space explored %, and computation time.
